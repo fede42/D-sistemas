@@ -2,6 +2,7 @@
 #define _INPUT_MANAGER_H
 
 #include "Gamepad.h"
+#include <thread>
 
 class InputManager{
 private:

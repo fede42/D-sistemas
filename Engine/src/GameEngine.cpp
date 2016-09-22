@@ -44,10 +44,12 @@ int main(){
 	gMemoryManager->startUp();
 	gFileSystemManager->startUp();
 
+	
+
 	while (true) { //main loop
 		gRenderManager->update();
 		gPhysicsManager->update();
-		gInputManager->update();
+		/*gInputManager->update();*/
 		gAnimationManager->update();
 		gAnimationManager->update();
 

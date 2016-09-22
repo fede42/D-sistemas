@@ -32,8 +32,8 @@ public:
 		framesLeft_--;
 		state_.live.x_ += state_.live.xVel_;
 		state_.live.y_ += state_.live.yVel_;
-		/*count++;
-		std::cout << count << '\n';*/
+		count++;
+		std::cout << count << '\n';
 		return framesLeft_ == 0;
 	}
 
@@ -102,6 +102,7 @@ public:
 				std::cout << count << '\n';*/
 				particles_[i].setNext(firstAvailable_);
 				firstAvailable_ = &particles_[i];
+				create(0,0,6,6,1);
 			}
 		}
 	}
@@ -169,7 +170,7 @@ int main()
 
 	//Prueba pool 
 	for (int i = 0; i < POOLSIZE; i++) {
-		prueba1.create(0, 0, 6, 6, 6);
+		prueba1.create(0, 0, 6, 6, 1);
 	}
 	start1 = clock();		
 	for (int i = 0; i < 250000; i++) {
